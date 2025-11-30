@@ -2,11 +2,21 @@
   <div>
     <a>Сетка товаров</a>
   </div>
-  <div v-for="item in items">
-    {{item}}
-  </div>
+    <productCard 
+      v-for="item in items"
+        :name = "item.name"
+        :img = "item.img"
+        :decription = "item.decription"
+    />
 </template>
 
 <script setup>
-let items = [1,2,3,4]
+import productCard from './productCard.vue'
+
+defineProps(['items'])
+
+let items = [
+  'name' = 'asd'
+  'decription' = 'asddsdd'
+]
 </script>
